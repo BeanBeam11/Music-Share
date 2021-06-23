@@ -76,13 +76,34 @@ section{
     box-sizing: border-box;
 }
 .info{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
-    padding: 1rem;
+    padding: 2rem;
+    font-size: 1.3rem;
+    /* display: none; */
 }
+.info-title{
+    font-weight: bold;
+} 
+.info-content{
+    font-weight: normal;
+} 
 .fav-lyric{
     display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    font-size: 1.3rem;
+}
+.lyric{
+    text-align: center;
+}
+.lyric-text{
+    font-style: italic;
+    font-weight: medium;
+    margin-top: 1rem;
 }
 footer{
     width: 100vw;
