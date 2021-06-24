@@ -18,13 +18,16 @@
             <div class="logo">
                 <img src="./img/music_share.png" alt="">
             </div>
+            <div class="nav-item">Artist</div>
+            <div class="nav-item">Trending</div>
+            <div class="nav-item">Chart</div>
             <div class="user"><span class="material-icons-round">account_box</span></div>
         </div>
     </nav>
     <div class="bg-blue"></div>
     <header>
         <div class="text">Share Your Favorite Song HERE</div>
-        <div class="add"><span class="material-icons-round">add_circle_outline</span></div>
+        <div class="add" data-toggle="modal" data-target="#exampleModal"><span class="material-icons-round">add_circle_outline</span></div>
     </header>
     <section>
         <div class="container">
@@ -32,16 +35,17 @@
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                     <div class="box">
                         <div class="info">
-                            <div class="info-title name">Name : <span class="info-content name-data">Sofia</span></div>
-                            <div class="info-title song">Fav Song : <span class="info-content song-data">RED</span></div>
-                            <div class="info-title singer">Singer : <span class="info-content singer-data">Taylor Swift</span></div>
-                            <div class="info-title reason">Reason : <span class="info-content reason-data">...</span></div>
-                            <div class="info-btn"></div>
+                            <div class="info-title song-title">Fav Song : <span class="info-content song-data">RED</span></div>
+                            <div class="info-title singer-title">Singer : <span class="info-content singer-data">Taylor Swift</span></div>
+                            <div class="info-title name-title">Name : <span class="info-content name-data">Sofia</span></div>
+                            <div class="info-title lyric-title">Fav Lyrics : 
+                                <div>" <span class="info-content lyric-data">Losing him was blue, like I'd never known Missing him was dark gray, all alone Forgetting him was like trying to know Somebody you never met But loving him was red</span> "</div>
+                            </div>
                         </div>
-                        <div class="fav-lyric">
-                            <div class="lyric">Fav Lyrics</div>
-                            <div class="lyric-text">
-                                "<span class="lyric-text-data">Losing him was blue like I never know Missing him was dark gray all alone</span>"
+                        <div class="reason">
+                            <div class="reason-title">Reason</div>
+                            <div class="reason-text">
+                                " <span class="reason-text-data">Losing him was blue like I never know Missing him was dark gray all alone</span> "
                             </div>
                         </div>
                     </div>
@@ -53,9 +57,51 @@
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                     <div class="box"></div>
                 </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="box"></div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="box"></div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="box"></div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="box"></div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="box"></div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="box"></div>
+                </div>
             </div>
         </div>
     </section>
+    <!-- Modal -->
+    <div class="modal fade modal-custom" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header modal-header-custom">
+                    <h5 class="modal-title modal-title-custom" id="exampleModalLabel">Let's Share Your Favorite Song</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body modal-body-custom">
+                    <span class="input-title">Your Name: </span><input type="text" class="" id="userName" name="userName" placeholder="Name">
+                    <span class="input-title">Fav Song: </span><input type="text" class="" id="userSong" name="userSong" placeholder="Fav Song">
+                    <span class="input-title">Singer: </span><input type="text" class="" id="userSinger" name="userSinger" placeholder="Singer">
+                    <span class="input-title">Fav Lyrics: </span><textarea class="" name="userLyric" id="userLyric" cols="30" rows="6" maxlength="170" placeholder="Write Down Your Fav Lyrics (170 words)"></textarea>
+                    <span class="input-title">Reason: </span><textarea class="" name="userReason" id="userReason" cols="30" rows="10" maxlength="280" placeholder="Write Down Your Reason (280 words)"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-close" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-share">Share</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="container">
             <p>© 2021 adodaily, Inc</p>

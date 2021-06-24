@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 /*font-family: 'Cormorant Garamond', serif;*/
+
 body{
     font-family: 'Cormorant Garamond', serif;
+    color: #404040;
 }
+
+/* Nav */
 nav{
     position: fixed;
     top: 0;
@@ -13,19 +17,40 @@ nav{
 }
 nav .container{
     position: relative;
+    display: flex;
+    flex-direction: row;
 }
 .logo img{
     position: relative;
     width: 4rem;
     margin-top: 0.5rem;
-    float: left;
+    cursor: pointer;
+}
+.nav-item{
+    position: relative;
+    width: auto;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin-top: 1.9rem;
+    margin-left: 3rem;
+    cursor: pointer;
+}
+.nav-item:hover{
+    color: #E9D8B5;
+}
+.user{
+    position: relative;
+    margin-left: auto;
 }
 .user .material-icons-round{
     position: relative;
     font-size: 2.5rem;
     margin-top: 1.25rem;
-    float: right;
     color: #404040;
+    cursor: pointer;
+}
+.material-icons-round:hover{
+    color: #E9D8B5;
 }
 .bg-blue{
     position: fixed;
@@ -35,6 +60,7 @@ nav .container{
     height: 60vh;
     background-color: #B0C6D9;
 }
+/* Header */
 header{
     position: relative;
     width: 100vw;
@@ -64,24 +90,93 @@ header .text{
 .add .material-icons-round:hover{
     color: #F9EDD1;
 }
+/* Modal */
+.modal-custom{
+
+}
+.modal-header-custom .close{
+    margin: -1rem;
+}
+.modal-title-custom{
+    position: relative;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.modal-body-custom{
+    display: block;
+    background-color: #F9EDD1;
+    padding: 1.5rem;
+}
+.modal-body-custom .input-title{
+    font-weight: bold;
+}
+.modal-body-custom input{
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 1px solid #E9D8B5;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+input:focus{
+    outline: none !important;
+    border: 1px solid #E9D8B5;
+}
+.modal-body-custom textarea{
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 1px solid #E9D8B5;
+    border-radius: 5px;
+    padding: 0.5rem;
+    resize: none;
+}
+textarea:focus{
+    outline: none !important;
+    border: 1px solid #E9D8B5;
+}
+.btn-close{
+    color: #E9D8B5;
+    border: 1px solid #E9D8B5; 
+}
+.btn-close:hover{
+    color: #fff;
+    background-color: #E9D8B5;
+    border: 1px solid #E9D8B5; 
+}
+.btn-share{
+    color: #B0C6D9;
+    border: 1px solid #B0C6D9;
+}
+.btn-share:hover{
+    color: #fff;
+    background-color: #B0C6D9;
+    border: 1px solid #B0C6D9;
+}
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+/* Section */
 section{
     margin-top: 5rem;
 }
+/* Box */
 .box{
     position: relative;
     width: 100%;
-    min-height: 20rem;
+    min-height: 22rem;
     background-color: #F9EDD1;
     margin-bottom: 2rem;
     box-sizing: border-box;
+    cursor: pointer;
 }
 .info{
+    /* display: none; */
     position: absolute;
     width: 100%;
     height: 100%;
     padding: 2rem;
     font-size: 1.3rem;
-    /* display: none; */
 }
 .info-title{
     font-weight: bold;
@@ -89,7 +184,14 @@ section{
 .info-content{
     font-weight: normal;
 } 
-.fav-lyric{
+.lyric-title{
+    margin-top: 0.5rem;
+}
+.info .lyric-data{
+    font-style: italic;
+    font-weight: medium;
+}
+.reason{
     display: none;
     position: absolute;
     width: 100%;
@@ -97,10 +199,10 @@ section{
     padding: 2rem;
     font-size: 1.3rem;
 }
-.lyric{
+.reason-title{
     text-align: center;
 }
-.lyric-text{
+.reason-text{
     font-style: italic;
     font-weight: medium;
     margin-top: 1rem;
