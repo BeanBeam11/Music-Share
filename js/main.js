@@ -2,6 +2,7 @@ let serverURL = 'https://script.google.com/macros/s/AKfycbxyYWGlQrAWoQNDVgFZqbgV
 
 $(document).ready(function(){
     initBtnFunc();
+    readFromServer();
 });
 
 function initBtnFunc(){
@@ -32,4 +33,26 @@ function sendToServer(){
         alert('送出失敗');
         console.log(data);
     });  
+}
+
+function readFromServer(){
+    let parameter = {};
+    parameter.method = 'read1';
+    $.post(serverURL, parameter, function(data){
+        setBox(data);
+    }).fail(function(data){
+        alert('error');
+    });
+}
+
+function setBox(sData){
+    let node = $('#box01').html();
+    for(let i=1; i<sData.length; i++){
+        let content = node.replace('SONG_HERE', sData[i][3]);
+        content = content.replace('SINGER_HERE', sData[i][4]);
+        content = content.replace('NAME_HERE', sData[i][2]);
+        content = content.replace('LYRIC_HERE', sData[i][5]);
+        content = content.replace('REASON_HERE', sData[i][6]);
+        $('.row').append(content);
+    }
 }
