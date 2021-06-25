@@ -4,6 +4,8 @@
 body{
     font-family: 'Cormorant Garamond', serif;
     color: #404040;
+    width: 100vw;
+    min-height: 100vh;
 }
 
 /* Nav */
@@ -327,23 +329,34 @@ footer p{
     text-align: center;
     margin-top: 2rem;
     font-size: 2.5rem;
-    font-weight: bold;
+    font-weight: 400;
 }
-.intro{
+.intro1{
     position: relative;
     width: 100vw;
     height: 30rem;
-    display: flex;
-    align-items: center;
-}
-.intro1{
     background-color: #F9EDD1;
 }
 .intro2{
+    position: relative;
+    width: 100vw;
+    height: 30rem;
     background-color: #B0C6D9;
 }
 .intro3{
+    position: relative;
+    width: 100vw;
+    height: 30rem;
     background-color: #F9EDD1;
+}
+
+.intro{
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    margin: 0;
 }
 .intro-round{
     position: relative;
@@ -360,9 +373,6 @@ footer p{
     object-fit: contain;
     object-position: center center;
 }
-.intro-info{
-    margin-left: 5rem;
-}
 .intro-info .artist-title{
     font-size: 1.2rem;
 }
@@ -370,6 +380,7 @@ footer p{
     font-size: 2.5rem;
 }
 .intro-info .artist-intro{
+    width: 100%;
     margin-top: 1rem;
 }
 .intro2 .intro-info{
