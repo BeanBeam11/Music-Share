@@ -59,6 +59,14 @@ function setBox(sData){
         content = content.replace('REASON_HERE', sData[i][5]);
         $('.row').append(content);
     }
+
+    switchContent();
+}
+
+function switchContent(){
+    $('.info').hover(function(event){
+        
+    });
 }
 
 function refreshPage(){
