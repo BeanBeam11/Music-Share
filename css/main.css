@@ -292,6 +292,7 @@ footer p{
     position: relative;
     width: 22vw;
     height: 22vw;
+    z-index: 888;
 }
 .round3 img{
     position: relative;
