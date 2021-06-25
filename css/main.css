@@ -168,17 +168,22 @@ section{
     margin-top: 5rem;
 }
 /* Box */
-.box-wrapper{
+.boxes-wrapper{
     margin-bottom: 5rem;
 }
 .box{
     position: relative;
     width: 100%;
     min-height: 22rem;
-    background-color: #F9EDD1;
     margin-bottom: 2rem;
     box-sizing: border-box;
+    /* flip card */
     cursor: pointer;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.box.flipped{
+    transform: rotateY(180deg);
 }
 .info{
     /* display: none; */
@@ -187,6 +192,8 @@ section{
     height: 100%;
     padding: 2rem;
     font-size: 1.3rem;
+    background-color: #F9EDD1;
+    backface-visibility: hidden;
 }
 .info-title{
     font-weight: bold;
@@ -202,14 +209,18 @@ section{
     font-weight: medium;
 }
 .reason{
-    display: none;
+    /* display: none; */
     position: absolute;
     width: 100%;
     height: 100%;
     padding: 2rem;
     font-size: 1.3rem;
+    background-color: #F9EDD1;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
 }
 .reason-title{
+    font-weight: bold;
     text-align: center;
 }
 .reason-text{

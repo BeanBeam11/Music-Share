@@ -57,6 +57,7 @@ function setBox(sData){
         content = content.replace('NAME_HERE', sData[i][1]);
         content = content.replace('LYRIC_HERE', sData[i][4]);
         content = content.replace('REASON_HERE', sData[i][5]);
+        content = content.replace('ID_HERE', sData[i][0]);
         $('.row').append(content);
     }
 
@@ -64,8 +65,10 @@ function setBox(sData){
 }
 
 function switchContent(){
-    $('.info').hover(function(event){
-        
+    $('.box').click(function(event){
+        let boxID = $(this).attr("id");  
+        // console.log(boxID);
+        $('#' + boxID).toggleClass('flipped');
     });
 }
 
