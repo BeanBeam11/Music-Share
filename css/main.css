@@ -7,6 +7,14 @@ body{
 }
 
 /* Nav */
+a{
+    text-decoration: none;
+    color: #404040;
+}
+a:hover{
+    text-decoration: none;
+    color: #E9D8B5;
+}
 nav{
     position: fixed;
     top: 0;
