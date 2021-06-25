@@ -1,6 +1,7 @@
 let serverURL = 'https://script.google.com/macros/s/AKfycbxyYWGlQrAWoQNDVgFZqbgVS7STXDnH7xkIlqyfOTzv3ERccYn8sbmWzl2Yrafrtw4/exec';
 
 $(document).ready(function(){
+    showSpinner();
     initBtnFunc();
     readFromServer();
 });
@@ -25,7 +26,8 @@ function sendToServer(){
     $.post(serverURL, parameter, function(data){
         console.log(data);
         if(data.result = 'sus'){
-            alert('送出成功');
+            alert('Thank you for sharing');
+            setTimeout(refreshPage(), 1700);
         } else{
             alert('送出失敗，請檢查後再試試看');
         }
@@ -33,6 +35,8 @@ function sendToServer(){
         alert('送出失敗');
         console.log(data);
     });  
+
+    // refreshPage();
 }
 
 function readFromServer(){
@@ -48,11 +52,22 @@ function readFromServer(){
 function setBox(sData){
     let node = $('#box01').html();
     for(let i=1; i<sData.length; i++){
-        let content = node.replace('SONG_HERE', sData[i][3]);
-        content = content.replace('SINGER_HERE', sData[i][4]);
-        content = content.replace('NAME_HERE', sData[i][2]);
-        content = content.replace('LYRIC_HERE', sData[i][5]);
-        content = content.replace('REASON_HERE', sData[i][6]);
+        let content = node.replace('SONG_HERE', sData[i][2]);
+        content = content.replace('SINGER_HERE', sData[i][3]);
+        content = content.replace('NAME_HERE', sData[i][1]);
+        content = content.replace('LYRIC_HERE', sData[i][4]);
+        content = content.replace('REASON_HERE', sData[i][5]);
         $('.row').append(content);
     }
+}
+
+function refreshPage(){
+    window.location.reload();
+} 
+
+function showSpinner(){
+    $('.loading').show();
+    setTimeout(function hideSpinner(){
+        $('.loading').hide();
+    }, 1700);
 }

@@ -229,6 +229,25 @@ footer p{
     line-height: 5rem;
     color: #404040;
 }
+/* spinner */
+.loading{
+    display: none;
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(176, 198, 217, 0.8);
+    z-index: 999;
+}
+.spinner{
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 40vh;
+    color: #EDF3F6;
+}
 /* ARTIST PAGE*/
 .artist-round-wrapper{
     position: relative;
