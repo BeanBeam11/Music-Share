@@ -169,6 +169,9 @@ section{
     margin-top: 5rem;
 }
 /* Box */
+.box-wrapper{
+    margin-bottom: 5rem;
+}
 .box{
     position: relative;
     width: 100%;
@@ -216,13 +219,144 @@ section{
     margin-top: 1rem;
 }
 footer{
+    position: relative;
     width: 100vw;
     height: 5rem;
     background-color: #EDF3F6;
-    margin-top: 5rem;
 }
 footer p{
     text-align: center;
     line-height: 5rem;
     color: #404040;
+}
+/* ARTIST PAGE*/
+.artist-round-wrapper{
+    position: relative;
+    width: 100vw;
+    height: 28vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5rem;
+    padding: 3rem 5rem;
+}
+.round{
+    position: relative;
+    border-radius: 50%;
+    background-color: #404040;
+    overflow: hidden;
+}
+.round1{
+    position: relative;
+    width: 12vw;
+    height: 12vw;
+}
+.round1 img{
+    position: relative;
+    width: 12vw;
+    height: 12vw;
+    object-fit: contain;
+    object-position: center center;
+}
+.round2{
+    position: relative;
+    width: 15vw;
+    height: 15vw;
+}
+.round2 img{
+    position: relative;
+    width: 15vw;
+    height: 15vw;
+    object-fit: contain;
+    object-position: center center;
+}
+.round3{
+    position: relative;
+    width: 22vw;
+    height: 22vw;
+}
+.round3 img{
+    position: relative;
+    width: 22vw;
+    height: 22vw;
+    object-fit: contain;
+    object-position: center center;
+}
+.round4{
+    position: relative;
+    width: 15vw;
+    height: 15vw;
+}
+.round4 img{
+    position: relative;
+    width: 15vw;
+    height: 15vw;
+    object-fit: contain;
+    object-position: center center;
+}
+.round5{
+    position: relative;
+    width: 12vw;
+    height: 12vw;
+}
+.round5 img{
+    position: relative;
+    width: 12vw;
+    height: 12vw;
+    object-fit: contain;
+    object-position: center center;
+}
+.round-title{
+    position: relative;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.intro{
+    position: relative;
+    width: 100vw;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+}
+.intro1{
+    background-color: #F9EDD1;
+}
+.intro2{
+    background-color: #B0C6D9;
+}
+.intro3{
+    background-color: #F9EDD1;
+}
+.intro-round{
+    position: relative;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    background-color: #404040;
+    overflow: hidden;
+}
+.intro-round img{
+    position: relative;
+    width: 18rem;
+    height: 18rem;
+    object-fit: contain;
+    object-position: center center;
+}
+.intro-info{
+    margin-left: 5rem;
+}
+.intro-info .artist-title{
+    font-size: 1.2rem;
+}
+.intro-info .artist-name{
+    font-size: 2.5rem;
+}
+.intro-info .artist-intro{
+    margin-top: 1rem;
+}
+.intro2 .intro-info{
+    text-align: right;
+    margin-right: 5rem;
 }
