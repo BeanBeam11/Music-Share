@@ -399,3 +399,75 @@ footer p{
     text-align: right;
     margin-right: 5rem;
 }
+/* chart */
+.vote-card-wrapper{
+    margin-top: 3rem;
+}
+.vote-card-wrapper .img-box{
+    position: relative;
+    width: 80%;
+    height: 25rem;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.vote-card-wrapper .img-box img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.vote-card-wrapper .vote-name{
+    font-size: 1.5rem;
+    margin: 1.5rem auto 0.5rem;
+    text-align: center;
+}
+.vote-card-wrapper .vote-num{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.vote-title{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+.vote-action-wrapper{
+    position: relative;
+    width: 80vw;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.select-artist-option{
+    position: relative;
+    display: block;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 15rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.custom-select:focus,.custom-select:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+.btn-vote{
+    position: relative;
+    display: block;
+    right: 0;
+    left: 0;
+    margin: auto;
+    color: #B0C6D9;
+    border: 1px solid #B0C6D9;
+    margin-bottom: 5rem;
+}
+.btn-vote:hover{
+    color: #fff;
+    background-color: #B0C6D9;
+    border: 1px solid #B0C6D9;
+}
