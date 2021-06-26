@@ -74,6 +74,7 @@ nav .container{
 }
 .material-icons-round:hover{
     color: #E9D8B5;
+    cursor: pointer;
 }
 .bg-blue{
     position: fixed;
@@ -520,17 +521,81 @@ footer p{
 }
 .artist-avatar{
     position: relative;
-    width: 8rem;
-    height: 8rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 1rem;
+    margin: 0 0.8rem;
     cursor: pointer;
 }
 .artist-avatar img{
     position: relative;
-    width: 8rem;
-    height: 8rem;
+    width: 6rem;
+    height: 6rem;
     object-fit: cover;
     object-position: center center;
+}
+.artist-album-wrapper{
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+.album-photo-box{
+    margin-bottom: 2rem;
+}
+.album-photo{
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    background-color: #000;
+    overflow: hidden;
+}
+.album-photo img{
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    object-position: center center;
+}
+.photo-name{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    color: #fff;
+    font-size: 1rem;
+}
+.add-photo{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9EDD1;
+}
+.add-photo-btn{
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+}
+.add-photo-btn .material-icons-round{
+    position: relative;
+    font-size: 4rem;
+    color: #E9D8B5;
+    cursor: pointer;
+}
+.add-photo-btn .material-icons-round:hover{
+    color: #B0C6D9;
+}
+.photo-artist-option{
+    margin-bottom: 1rem;
+}
+.btn-add{
+    color: #B0C6D9;
+    border: 1px solid #B0C6D9;
+}
+.btn-add:hover{
+    color: #fff;
+    background-color: #B0C6D9;
+    border: 1px solid #B0C6D9;
 }
