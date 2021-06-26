@@ -511,3 +511,26 @@ footer p{
     background-color: #B0C6D9;
     border: 1px solid #B0C6D9;
 }
+/* Trending */
+.artist-avatar-wrapper{
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.artist-avatar{
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.artist-avatar img{
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    object-position: center center;
+}
