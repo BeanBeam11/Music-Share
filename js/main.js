@@ -1,4 +1,5 @@
 let serverURL = 'https://script.google.com/macros/s/AKfycbyNYdTkYBGaRODfS4MNtbVZKghi3B67ZuB-7s8alJsWPaMbdvcP5xHmg1MFMtnXItw/exec';
+let event_ary = ['input[type=text]','textarea'];
 
 $(document).ready(function(){
     showSpinner();
@@ -6,9 +7,22 @@ $(document).ready(function(){
     readFromServer();
 });
 
+for(let i=0;i<event_ary.length;i++){
+    $(event_ary[i]).focusout(function(event){
+        if($(this).val() == ''){
+            setTip($(this));
+        }
+    });
+    $(event_ary[i]).keyup(function(event){
+        if($(this).val() != ''){
+            removeTip($(this));
+        }
+    });
+}
+
 function initBtnFunc(){
     $('.btn-share').click(function(event){
-        sendToServer();
+        checkField();
     });
 }
 
@@ -35,8 +49,6 @@ function sendToServer(){
         alert('送出失敗');
         console.log(data);
     });  
-
-    // refreshPage();
 }
 
 function readFromServer(){
@@ -62,6 +74,52 @@ function setBox(sData){
     }
 
     switchContent();
+}
+
+function checkField(){
+    let name = $('input[name=userName]');
+    let song = $('input[name=userSong]');
+    let singer = $('input[name=userSinger]');
+    let lyric = $('textarea[name=userLyric]');
+    let reason = $('textarea[name=userReason]');
+
+    if( name.val() == ''){
+        setTip(name);
+        return false;
+    }
+    if( song.val() == ''){
+        setTip(song);
+        return false;
+    }
+    if( singer.val() == ''){
+        setTip(singer);
+        return false;
+    }
+    if( lyric.val() == ''){
+        setTip(lyric);
+        return false;
+    }
+    if( reason.val() == ''){
+        setTip(reason);
+        return false;
+    }
+    else if(name.val() != '' && song.val() != '' && singer.val() != '' && lyric.val() != '' && reason.val() != ''){
+        sendToServer();
+    }
+}
+
+function setTip(dom){
+    let template = $('#tipTemplate01');
+    let node = $('#tipTemplate01').html();
+    if(dom.closest('.main-group').find('.tip').length == 0){
+        dom.closest('.main-group').append(node);
+        dom.closest('.main-group').addClass('bdr');
+    }
+}
+
+function removeTip(dom){
+    dom.closest('.main-group').find('.tip').remove();
+    dom.closest('.main-group').removeClass('bdr');
 }
 
 function switchContent(){

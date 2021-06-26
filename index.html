@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
 
@@ -48,11 +49,27 @@
                     </button>
                 </div>
                 <div class="modal-body modal-body-custom">
-                    <span class="input-title">Your Name: </span><input type="text" class="" id="userName" name="userName" placeholder="Name">
-                    <span class="input-title">Fav Song: </span><input type="text" class="" id="userSong" name="userSong" placeholder="Fav Song">
-                    <span class="input-title">Singer: </span><input type="text" class="" id="userSinger" name="userSinger" placeholder="Singer">
-                    <span class="input-title">Fav Lyrics: </span><textarea class="" name="userLyric" id="userLyric" cols="30" rows="6" maxlength="170" placeholder="Write Down Your Fav Lyrics (170 words)"></textarea>
-                    <span class="input-title">Reason: </span><textarea class="" name="userReason" id="userReason" cols="30" rows="10" maxlength="280" placeholder="Write Down Your Reason (280 words)"></textarea>
+                    
+                    <span class="input-title">Your Name: </span>
+                    <div class="main-group">
+                        <input type="text" class="" id="userName" name="userName" placeholder="Name">
+                    </div>
+                    <span class="input-title">Fav Song: </span>
+                    <div class="main-group">
+                        <input type="text" class="" id="userSong" name="userSong" placeholder="Fav Song">
+                    </div>
+                    <span class="input-title">Singer: </span>
+                    <div class="main-group">
+                        <input type="text" class="" id="userSinger" name="userSinger" placeholder="Singer">
+                    </div>
+                    <span class="input-title">Fav Lyrics: </span>
+                    <div class="main-group">
+                        <textarea class="" name="userLyric" id="userLyric" cols="30" rows="6" maxlength="170" placeholder="Write Down Your Fav Lyrics (170 words)"></textarea>
+                    </div>
+                    <span class="input-title">Reason: </span>
+                    <div class="main-group">
+                        <textarea class="" name="userReason" id="userReason" cols="30" rows="10" maxlength="280" placeholder="Write Down Your Reason (280 words)"></textarea>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-close" data-dismiss="modal">Close</button>
@@ -96,6 +113,12 @@
                 </div>
             </div>
         </div>
+    </div>
+  </template>
+  <template id="tipTemplate01" style="display: none;">
+    <div class="tip">
+        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+        <span>It's a required field</span>
     </div>
   </template>
 </html>

@@ -8,6 +8,19 @@ body{
     min-height: 100vh;
 }
 
+.tip{
+    width: 100%;
+    color: #EE858B;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    margin-top: -1rem;
+}
+
+.bdr{
+    border: 1px solid #EE858B;
+    border-radius: 6px;
+}
+
 /* Nav */
 a{
     text-decoration: none;
