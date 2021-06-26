@@ -1,4 +1,4 @@
-let serverURL = 'https://script.google.com/macros/s/AKfycbxyYWGlQrAWoQNDVgFZqbgVS7STXDnH7xkIlqyfOTzv3ERccYn8sbmWzl2Yrafrtw4/exec';
+let serverURL = 'https://script.google.com/macros/s/AKfycbyNYdTkYBGaRODfS4MNtbVZKghi3B67ZuB-7s8alJsWPaMbdvcP5xHmg1MFMtnXItw/exec';
 
 $(document).ready(function(){
     showSpinner();

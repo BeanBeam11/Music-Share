@@ -82,6 +82,13 @@ header .text{
     text-align: center;
     margin-top: 10rem;
 }
+header .text-small{
+    position: relative;
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 0.5rem;
+}
 .add{
     position: relative;
     width: 3rem;
@@ -179,7 +186,7 @@ section{
     box-sizing: border-box;
     /* flip card */
     cursor: pointer;
-    transition: transform 1s;
+    transition: transform 0.8s;
     transform-style: preserve-3d;
 }
 .box.flipped{

@@ -1,4 +1,4 @@
-let serverURL = 'https://script.google.com/macros/s/AKfycbxyYWGlQrAWoQNDVgFZqbgVS7STXDnH7xkIlqyfOTzv3ERccYn8sbmWzl2Yrafrtw4/exec';
+let serverURL = 'https://script.google.com/macros/s/AKfycbyNYdTkYBGaRODfS4MNtbVZKghi3B67ZuB-7s8alJsWPaMbdvcP5xHmg1MFMtnXItw/exec';
 
 $(document).ready(function(){
     showSpinner();
@@ -14,7 +14,7 @@ function initBtnFunc(){
 
 function sendToServer(){
     let parameter = {};
-    parameter.userName = $('input[name=userName]').val();
+    parameter.voteArtist = $('select[name=voteArtist]').val();
     console.log(parameter);
 
     parameter.method = "write1";
@@ -44,10 +44,11 @@ function readFromServer(){
 }
 
 function setBox(sData){
-    let node = $('#').html();
+    let node = $('.vote-card-area').html();
     for(let i=1; i<sData.length; i++){
-        let content = node.replace('SONG_HERE', sData[i][2]);
-        content = content.replace('SINGER_HERE', sData[i][3]);
+        let content = node.replace('VOTE_NUM_OLIVIA', sData[i][2]);
+        content = content.replace('VOTE_NUM_TAYLOR', sData[i][3]);
+        content = content.replace('VOTE_NUM_DUA', sData[i][3]);
     }
 }
 
