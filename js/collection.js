@@ -83,6 +83,7 @@ function setAlbum(){
 }
 
 function setPhoto(sData){
+
     let nodeTay = $('#type-album-taylor').html();
     let nodeOli = $('#type-album-olivia').html();
     let nodeDua = $('#type-album-dua').html();
@@ -90,11 +91,19 @@ function setPhoto(sData){
     let nodeCha = $('#type-album-charlie').html();
     console.log(sData);
 
+    for(let i=sData.length-1; i>0; i--){
+        let content = nodeTay.replace('NAME_HERE', sData[i][1]);
+        content = content.replace('IMG_URL_HERE', sData[i][3]);
+        content = content.replace('ID_HERE', sData[i][0]);
+        $('.row').append(content);
+    }
+
     let Tay = [];
     let Oli = [];
     let Dua = [];
     let Sha = [];
     let Cha = [];
+
 
     $('#artist-avatar-taylor').click(function(event){
         $('.ID_olivia').hide();
@@ -186,53 +195,6 @@ function setPhoto(sData){
             $('.row').append(content);
         }
     });
-    // for(let i=1; i<sData.length; i++){
-    //     if(sData[i][2] == 'Taylor Swift'){
-    //         Tay.push(sData[i]);
-    //     }
-    //     if(sData[i][2] == 'Olivia Rodrigo'){
-    //         Oli.push(sData[i]);
-    //     }
-    //     if(sData[i][2] == 'Dua Lipa'){
-    //         Dua.push(sData[i]);
-    //     }
-    //     if(sData[i][2] == 'Shawn Mendes'){
-    //         Sha.push(sData[i]);
-    //     }
-    //     if(sData[i][2] == 'Charlie Puth'){
-    //         Cha.push(sData[i]);
-    //     }
-    // }
-    // for(let i=Tay.length-1; i>=0; i--){
-    //     let content = nodeTay.replace('NAME_HERE', Tay[i][1]);
-    //     content = content.replace('IMG_URL_HERE', Tay[i][3]);
-    //     content = content.replace('ID_HERE', Tay[i][0]);
-    //     $('.row').append(content);
-    // }
-    // for(let i=Oli.length-1; i>=0; i--){
-    //     let content = nodeOli.replace('NAME_HERE', Oli[i][1]);
-    //     content = content.replace('IMG_URL_HERE', Oli[i][3]);
-    //     content = content.replace('ID_HERE', Oli[i][0]);
-    //     $('.row').append(content);
-    // }
-    // for(let i=Dua.length-1; i>=0; i--){
-    //     let content = nodeDua.replace('NAME_HERE', Dua[i][1]);
-    //     content = content.replace('IMG_URL_HERE', Dua[i][3]);
-    //     content = content.replace('ID_HERE', Dua[i][0]);
-    //     $('.row').append(content);
-    // }
-    // for(let i=Sha.length-1; i>=0; i--){
-    //     let content = nodeSha.replace('NAME_HERE', Sha[i][1]);
-    //     content = content.replace('IMG_URL_HERE', Sha[i][3]);
-    //     content = content.replace('ID_HERE', Sha[i][0]);
-    //     $('.row').append(content);
-    // }
-    // for(let i=Cha.length-1; i>=0; i--){
-    //     let content = nodeCha.replace('NAME_HERE', Cha[i][1]);
-    //     content = content.replace('IMG_URL_HERE', Cha[i][3]);
-    //     content = content.replace('ID_HERE', Cha[i][0]);
-    //     $('.row').append(content);
-    // }
 }
 
 function checkField(){
