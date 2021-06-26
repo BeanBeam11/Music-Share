@@ -1,4 +1,4 @@
-let serverURL = 'https://script.google.com/macros/s/AKfycbyNYdTkYBGaRODfS4MNtbVZKghi3B67ZuB-7s8alJsWPaMbdvcP5xHmg1MFMtnXItw/exec';
+let serverURL = 'https://script.google.com/macros/s/AKfycbxb3oNf7jKEt8VcAVqNOLHXXlBT7kLIZ-vf1N7gmNWt_Qr5jX9C81AskG-dyU3FacE/exec';
 
 $(document).ready(function(){
     showSpinner();
@@ -37,19 +37,36 @@ function readFromServer(){
     let parameter = {};
     parameter.method = 'read1';
     $.post(serverURL, parameter, function(data){
-        // setBox(data);
+        setNum(data);
     }).fail(function(data){
         alert('error');
     });
 }
 
-function setBox(sData){
-    let node = $('.vote-card-area').html();
+function setNum(sData){
+    let num_olivia = 0;
+    let num_taylor = 0;
+    let num_dua = 0;
+
     for(let i=1; i<sData.length; i++){
-        let content = node.replace('VOTE_NUM_OLIVIA', sData[i][2]);
-        content = content.replace('VOTE_NUM_TAYLOR', sData[i][3]);
-        content = content.replace('VOTE_NUM_DUA', sData[i][3]);
+        if(sData[i][1] == 'Taylor Swift'){
+            num_taylor++;
+        }
+        if(sData[i][1] == 'Olivia Rodrigo'){
+            num_olivia++;
+        }
+        if(sData[i][1] == 'Dua Lipa'){
+            num_dua++;
+        }
     }
+
+    console.log(num_taylor);
+    console.log(num_olivia);
+    console.log(num_dua);
+
+    $('#olivia .vote-num').html(num_olivia + ' votes');
+    $('#taylor .vote-num').html(num_taylor + ' votes');
+    $('#dua .vote-num').html(num_dua + ' votes');
 }
 
 function refreshPage(){
