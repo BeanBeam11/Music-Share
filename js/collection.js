@@ -84,116 +84,80 @@ function setAlbum(){
 
 function setPhoto(sData){
 
-    let nodeTay = $('#type-album-taylor').html();
-    let nodeOli = $('#type-album-olivia').html();
-    let nodeDua = $('#type-album-dua').html();
-    let nodeSha = $('#type-album-shawn').html();
-    let nodeCha = $('#type-album-charlie').html();
+    let node = $('#type-album').html();
     console.log(sData);
 
     for(let i=sData.length-1; i>0; i--){
-        let content = nodeTay.replace('NAME_HERE', sData[i][1]);
+        let content = node.replace('NAME_HERE', sData[i][1]);
         content = content.replace('IMG_URL_HERE', sData[i][3]);
         content = content.replace('ID_HERE', sData[i][0]);
+
+        if(sData[i][2] == 'Taylor Swift'){
+            content = content.replace('BOX_ID', 'ID_taylor');
+        }
+        if(sData[i][2] == 'Olivia Rodrigo'){
+            content = content.replace('BOX_ID', 'ID_olivia');
+        }
+        if(sData[i][2] == 'Dua Lipa'){
+            content = content.replace('BOX_ID', 'ID_dua');
+        }
+        if(sData[i][2] == 'Shawn Mendes'){
+            content = content.replace('BOX_ID', 'ID_shawn');
+        }
+        if(sData[i][2] == 'Charlie Puth'){
+            content = content.replace('BOX_ID', 'ID_charlie');
+        }
+        
         $('.row').append(content);
     }
 
-    let Tay = [];
-    let Oli = [];
-    let Dua = [];
-    let Sha = [];
-    let Cha = [];
+    //預設顯示全部
+    $('.ID_olivia').show();
+    $('.ID_dua').show();
+    $('.ID_shawn').show();
+    $('.ID_charlie').show();
+    $('.ID_taylor').show();
 
-
+    //分別點擊會出現該歌手的專屬相簿
     $('#artist-avatar-taylor').click(function(event){
         $('.ID_olivia').hide();
         $('.ID_dua').hide();
         $('.ID_shawn').hide();
         $('.ID_charlie').hide();
-        for(let i=1; i<sData.length; i++){
-            if(sData[i][2] == 'Taylor Swift'){
-                Tay.push(sData[i]);
-            }
-        }
-        console.log(Tay);
-        for(let i=Tay.length-1; i>=0; i--){
-            let content = nodeTay.replace('NAME_HERE', Tay[i][1]);
-            content = content.replace('IMG_URL_HERE', Tay[i][3]);
-            content = content.replace('ID_HERE', Tay[i][0]);
-            $('.row').append(content);
-        }
+
+        $('.ID_taylor').show();
     });
     $('#artist-avatar-shawn').click(function(event){
         $('.ID_olivia').hide();
         $('.ID_dua').hide();
         $('.ID_taylor').hide();
         $('.ID_charlie').hide();
-        for(let i=1; i<sData.length; i++){
-            if(sData[i][2] == 'Shawn Mendes'){
-                Sha.push(sData[i]);
-            }
-        }
-        console.log(Sha);
-        for(let i=Sha.length-1; i>=0; i--){
-            let content = nodeSha.replace('NAME_HERE', Sha[i][1]);
-            content = content.replace('IMG_URL_HERE', Sha[i][3]);
-            content = content.replace('ID_HERE', Sha[i][0]);
-            $('.row').append(content);
-        }
+
+        $('.ID_shawn').show();
     });
     $('#artist-avatar-olivia').click(function(event){
         $('.ID_taylor').hide();
         $('.ID_dua').hide();
         $('.ID_shawn').hide();
         $('.ID_charlie').hide();
-        for(let i=1; i<sData.length; i++){
-            if(sData[i][2] == 'Olivia Rodrigo'){
-                Oli.push(sData[i]);
-            }
-        }
-        console.log(Oli);
-        for(let i=Oli.length-1; i>=0; i--){
-            let content = nodeOli.replace('NAME_HERE', Oli[i][1]);
-            content = content.replace('IMG_URL_HERE', Oli[i][3]);
-            content = content.replace('ID_HERE', Oli[i][0]);
-            $('.row').append(content);
-        }
+
+        $('.ID_olivia').show();
     });
     $('#artist-avatar-dua').click(function(event){
         $('.ID_olivia').hide();
         $('.ID_taylor').hide();
         $('.ID_shawn').hide();
         $('.ID_charlie').hide();
-        for(let i=1; i<sData.length; i++){
-            if(sData[i][2] == 'Dua Lipa'){
-                Dua.push(sData[i]);
-            }
-        }
-        console.log(Dua);
-        for(let i=Dua.length-1; i>=0; i--){
-            let content = nodeDua.replace('NAME_HERE', Dua[i][1]);
-            content = content.replace('IMG_URL_HERE', Dua[i][3]);
-            content = content.replace('ID_HERE', Dua[i][0]);
-            $('.row').append(content);
-        }
+
+        $('.ID_dua').show();
     });
     $('#artist-avatar-charlie').click(function(event){
         $('.ID_olivia').hide();
         $('.ID_dua').hide();
         $('.ID_shawn').hide();
         $('.ID_taylor').hide();
-        for(let i=1; i<sData.length; i++){
-            if(sData[i][2] == 'Charlie Puth'){
-                Cha.push(sData[i]);
-            }
-        }
-        console.log(Cha);
-        for(let i=Cha.length-1; i>=0; i--){
-            let content = nodeCha.replace('NAME_HERE', Cha[i][1]);
-            content = content.replace('IMG_URL_HERE', Cha[i][3]);
-            content = content.replace('ID_HERE', Cha[i][0]);
-            $('.row').append(content);
-        }
+
+        $('.ID_charlie').show();
     });
 }
 
