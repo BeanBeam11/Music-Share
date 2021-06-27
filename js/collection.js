@@ -111,6 +111,10 @@ function setPhoto(sData){
         $('.row').append(content);
     }
 
+    $('.artist-avatar').hover(function(){
+        $(this).toggleClass('op-1');
+    });
+
     //預設顯示全部
     $('.ID_olivia').show();
     $('.ID_dua').show();
@@ -120,6 +124,12 @@ function setPhoto(sData){
 
     //分別點擊會出現該歌手的專屬相簿
     $('#artist-avatar-taylor').click(function(event){
+        $(this).toggleClass('op-1');
+        $('#artist-avatar-shawn').removeClass('op-1');
+        $('#artist-avatar-olivia').removeClass('op-1');
+        $('#artist-avatar-dua').removeClass('op-1');
+        $('#artist-avatar-charlie').removeClass('op-1');
+
         $('.ID_olivia').hide();
         $('.ID_dua').hide();
         $('.ID_shawn').hide();
@@ -128,6 +138,12 @@ function setPhoto(sData){
         $('.ID_taylor').show();
     });
     $('#artist-avatar-shawn').click(function(event){
+        $(this).toggleClass('op-1');
+        $('#artist-avatar-taylor').removeClass('op-1');
+        $('#artist-avatar-olivia').removeClass('op-1');
+        $('#artist-avatar-dua').removeClass('op-1');
+        $('#artist-avatar-charlie').removeClass('op-1');
+
         $('.ID_olivia').hide();
         $('.ID_dua').hide();
         $('.ID_taylor').hide();
@@ -136,6 +152,12 @@ function setPhoto(sData){
         $('.ID_shawn').show();
     });
     $('#artist-avatar-olivia').click(function(event){
+        $(this).toggleClass('op-1');
+        $('#artist-avatar-shawn').removeClass('op-1');
+        $('#artist-avatar-taylor').removeClass('op-1');
+        $('#artist-avatar-dua').removeClass('op-1');
+        $('#artist-avatar-charlie').removeClass('op-1');
+
         $('.ID_taylor').hide();
         $('.ID_dua').hide();
         $('.ID_shawn').hide();
@@ -144,6 +166,12 @@ function setPhoto(sData){
         $('.ID_olivia').show();
     });
     $('#artist-avatar-dua').click(function(event){
+        $(this).toggleClass('op-1');
+        $('#artist-avatar-shawn').removeClass('op-1');
+        $('#artist-avatar-olivia').removeClass('op-1');
+        $('#artist-avatar-taylor').removeClass('op-1');
+        $('#artist-avatar-charlie').removeClass('op-1');
+
         $('.ID_olivia').hide();
         $('.ID_taylor').hide();
         $('.ID_shawn').hide();
@@ -152,6 +180,12 @@ function setPhoto(sData){
         $('.ID_dua').show();
     });
     $('#artist-avatar-charlie').click(function(event){
+        $(this).toggleClass('op-1');
+        $('#artist-avatar-shawn').removeClass('op-1');
+        $('#artist-avatar-olivia').removeClass('op-1');
+        $('#artist-avatar-dua').removeClass('op-1');
+        $('#artist-avatar-taylor').removeClass('op-1');
+
         $('.ID_olivia').hide();
         $('.ID_dua').hide();
         $('.ID_shawn').hide();
