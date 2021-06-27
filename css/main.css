@@ -429,10 +429,15 @@ footer p{
     width: 100%;
     overflow-x: scroll;
 }
-.scroll-wrapper::-webkit-scrollbar {
-    height: 4px;              
-    width: 4px;
-  }
+.scroll-wrapper::-webkit-scrollbar{
+    height: 0.5rem;
+    background-color: transparent;
+}
+.scroll-wrapper::-webkit-scrollbar-thumb{
+    width: 3rem;
+    border-radius: 0.5rem;
+    background-color: #F9EDD1;
+}
 .vote-card-area{
     position: relative;
     display: flex;
